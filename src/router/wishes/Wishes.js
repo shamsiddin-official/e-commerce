@@ -23,7 +23,6 @@ function Wishes() {
       <Product data={wishes}/>
     }
       
-      <Product/>
     </div>
      
 

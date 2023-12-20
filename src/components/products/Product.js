@@ -18,6 +18,7 @@ function Product({ data }) {
     dispatch(incCart(el));
     toast.success("Savatchaga muvaffaqqiyatli qo'shildi");
   };
+  console.log(data);
 
   return (
     <>
