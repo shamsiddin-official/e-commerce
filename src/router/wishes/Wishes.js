@@ -6,6 +6,7 @@ import Product from '../../components/products/Product'
 
 function Wishes() {
   const wishes = useSelector( s=> s.wishes.value)
+
   console.log(wishes);
   return (
     <div className='container'>

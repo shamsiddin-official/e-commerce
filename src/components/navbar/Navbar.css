@@ -28,19 +28,64 @@
     flex: 1;
     border-radius: 4px;
     display: flex;
-    overflow: hidden;
+    position: relative;
 }
 .nav__search input{
     flex: 1;
     border: none;
     outline: none;
     text-indent: 16px;
+    border-radius: 4px 0 0 4px;
+    height: 38px;
 }
 .nav__search button{
     width: 70px;
     border: none;
     font-size: 20px;
+    border-radius: 0 4px 4px 0;
+
 }
+.nav__search__drop{
+    padding: 10px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    background: #fff;
+    z-index: 10;
+    box-shadow: 0 0 5px #0002, 10px 10px 10px #0001;
+    border-radius: 0 0 10px 10px;
+    overflow: auto;
+}
+.nav__search__item{
+    display: flex;
+    gap: 14px;
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    line-height: 1.6;
+}
+.nav__search__item img{
+    width: 40px;
+    height: 50px;
+    object-fit: cover;
+}
+.nav__search__item p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.nav__search__item :last-child{
+    border-bottom: none;
+}
+.nav__search__notfound img{
+    width: 150px;
+    display: block;
+    margin: 15px auto;
+}
+
 .nav__collection{
     display: flex;
     gap: 20px;
@@ -105,6 +150,9 @@
     .nav__search{
         flex: none;
         width: 100%;
+    }
+    .nav__search__notfound img{
+        width: 100px;
     }
 }
 @media screen and (max-width: 400px){

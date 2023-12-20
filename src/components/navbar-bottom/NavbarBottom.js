@@ -1,5 +1,6 @@
 import React from 'react'
 import "./NavbarBottom.css"
+import { useLocation } from 'react-router-dom';
 
 const DATA = [
     "Ektronika",
@@ -15,6 +16,10 @@ const DATA = [
 ]
 
 function NavbarBottom() {
+  const {pathname} =useLocation()
+  if(pathname.includes("login")){
+    return <></>
+  }
   return (
     <div className='container'>
         <div className="navbar__bottom">

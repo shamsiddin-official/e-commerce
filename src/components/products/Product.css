@@ -51,6 +51,7 @@ gap: 20px;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    word-break: break-all;
 }
 .products__monthly{
     display: inline-block;
@@ -96,14 +97,20 @@ gap: 20px;
     cursor: pointer;
     color: #555;
 }
-@media screen and (max-width:550px){
+.btns{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+}
+@media screen and (max-width:600px){
     .products__wrapper{
-        display: grid;
+        /* display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
+        grid-gap: 10px; */
+        gap: 10px;
     }
     .products__card{
-        width: auto;
+        width: calc(50% - 5px);
 
     }
     

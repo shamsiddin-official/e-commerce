@@ -1,0 +1,47 @@
+.sidebar__dark{
+    width: 100%;
+    height: 100vh;
+    background: #0005;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left:-300px;
+    transition: .3s;
+    z-index: 12;
+    border-right: 1px solid #ddd;
+
+}
+.sidebar.active{
+    left: 0;
+}
+.sidebar h1{
+    color:  #7000FF;
+    margin: 10px 10px;
+}
+.sidebar h2{
+    margin: 10px;
+    text-align: center;
+
+}
+.sidebar ul h3{
+    color: rgba(0, 0, 0, 0.782);
+    line-height: 2.5;
+    padding-left: 17px;
+}
+@media screen and (max-width: 600px) {
+    .sidebar{
+        width: 80%;
+        left: -80%;
+        font-size: 12px;
+    }
+    
+    
+}
