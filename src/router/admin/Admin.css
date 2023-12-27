@@ -1,0 +1,38 @@
+.admin{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+}
+.admin__sidebar{
+    height: 100vh;
+    background: var(--bg-py);
+    padding: 24px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.admin__content{
+    padding: 24px;
+}
+.admin__links a{
+    display: block;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.admin__links a.active{
+    background: #fff5;
+}
+.admin__btn{
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    background: #a055ff;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    font-size: 14px;
+    color: white;
+}

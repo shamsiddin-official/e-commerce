@@ -29,7 +29,7 @@ function Navbar({data}) {
 
   }, [value])
   
-  if(pathname.includes("login")){
+  if(pathname.includes("login") || pathname.includes("admin")){
     return <></>
   }
   return (
@@ -84,7 +84,7 @@ function Navbar({data}) {
             </NavLink>
           </li>
           <li className="nav__item">
-            <NavLink to={"/login"}>
+            <NavLink to={"/admin/create-product"}>
               <FaRegUser/>
               <span>Kirish</span>
             </NavLink>

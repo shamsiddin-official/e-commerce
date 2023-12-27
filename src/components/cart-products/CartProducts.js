@@ -6,6 +6,7 @@ import { deleteAllCart, incCart } from '../../contents/cartSlice'
 import { decCart,removeCart } from '../../contents/cartSlice'
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
+import Confetti from "react-confetti";
 
 
 const botToken ="6816468984:AAG3mHMx2ofOQ78fTy_Ej9Qpk_YywAstjaQ"
@@ -49,6 +50,7 @@ function CartProducts({data}) {
     dispatch(deleteAllCart())
     
     toast.success("Buyurtmangiz qabul qilindi. Qisqa vaqtda aloqaga chiqamiz!😊")
+
   }
   return (
     <div className='cart__wrapper'>
@@ -96,7 +98,8 @@ function CartProducts({data}) {
                 <p>Umumiy narx:</p>
                 <b> {data.reduce((a,b) => a + b.price * b.quantity, 0)?.brm()} so'm</b>
             </div> 
-            <button className='register__btn'> Rasmiylashtirishga o'tish</button>
+            <button className='register__btn'> Rasmiylashtirishga o'tish  </button>
+            <Confetti/>
            
 
 

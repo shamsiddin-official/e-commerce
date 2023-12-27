@@ -1,0 +1,8 @@
+.create-blog-textarea{
+    outline: none;
+    font-size: 18px;
+    line-height: 1.1;
+    padding: 10px 10px;
+    color: rgba(0, 0, 0, 0.816);
+    border: 1px solid rgba(0, 0, 0, 0.541);
+}

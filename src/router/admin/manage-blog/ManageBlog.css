@@ -1,0 +1,18 @@
+.manage-blog-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    line-height: 1.2;
+
+}
+.manage-blog-content{
+    width: 310px;
+    height: 400px;
+    gap: 10px;
+    border: 1px solid #0003;
+    padding: 15px 15px;
+    border-radius: 8px;
+    overflow: auto;
+}
