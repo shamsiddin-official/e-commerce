@@ -2,13 +2,20 @@ import React from 'react'
 import "./Home.css"
 import Carousel from '../../components/carousel/Carousel'
 import Product from '../../components/products/Product'
+import Skeleton from '../../components/products/Skeleton'
 
 
 function Home({data}) {
   return (
     <div className='container'>
       <Carousel/>
-      <Product data={data}/>
+      {
+        data.length ? 
+
+        <Product data={data}/>
+        :
+        <Skeleton/>
+      }
       
     </div>
   )

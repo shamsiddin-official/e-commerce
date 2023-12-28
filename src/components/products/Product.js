@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Product.css";
-import { FaRegHeart, FaHeart } from "react-icons/fa";
+import { FaRegHeart,FaTrash, FaHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import "number-brm";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import { incCart } from "../../contents/cartSlice";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
-function Product({ data }) {
+function Product({admin, data }) {
   const [count, setCount] = useState(1);
   const DEAFAULT__COUNT = 10;
   const dispatch = useDispatch();
@@ -27,6 +27,7 @@ function Product({ data }) {
         {
         data.slice(0, count * DEAFAULT__COUNT)?.map((el) => {
           return (
+
             <div key={el.id} className="products__card">
               <Link to={`/product/${el.id}`} className="products__image">
                 <img src={el.url} alt="" />
@@ -53,12 +54,20 @@ function Product({ data }) {
                   <FaRegHeart />
                 )}
               </div>
-              <div
-                onClick={() => handleAddToCart(el)}
+              {
+                admin? <div
                 className="products__cart"
               >
-                <IoCartOutline />
-              </div>
+                <FaTrash />
+              </div>:
+              <div
+              onClick={() => handleAddToCart(el)}
+              className="products__cart"
+            >
+              <IoCartOutline />
+            </div>
+              } 
+              
             </div>
           );
         })}

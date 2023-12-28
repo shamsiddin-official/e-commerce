@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Products from '../../../components/products/Product'
 import { db } from '../../../server/firebase'
 import {collection, getDocs} from 'firebase/firestore'
+import Skeleton from '../../../components/products/Skeleton';
 
 function ManageProduct() {
   const usersCollectionRef = collection(db, "products");
@@ -22,9 +23,15 @@ function ManageProduct() {
     
     <div>
         <h2>ManageProduct</h2>
-
+        {
+        data.length ? 
 
         <Products data={data}/>
+        :
+        <Skeleton/>
+      }
+
+
         
         
     </div>
